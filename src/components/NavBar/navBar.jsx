@@ -1,4 +1,5 @@
 import React from "react";
+import popcorn from "../../assets/images/popcorn.png";
 
 const NavBar = () => {
 return (
@@ -8,8 +9,8 @@ return (
                 <div className="flex-shrink-0">
                     <a href="/" className="cursor-pointer">
                         <img
-                            className="h-8 w-8"
-                            src="https://dummyimage.com/50x50"
+                            className="h-12 w-12"
+                            src={popcorn}
                             alt="Logo"
                         />
                     </a>

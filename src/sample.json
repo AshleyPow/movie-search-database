@@ -1,0 +1,82 @@
+[
+    {
+      "id": 1,
+      "movie_name": "Inception",
+      "thumbnail_url": "https://m.media-amazon.com/images/I/81p+xe8cbnL._AC_SY679_.jpg",
+      "description": "A skilled thief, the absolute best in the dangerous art of extraction, steals valuable secrets from deep within the subconscious during the dream state, when the mind is at its most vulnerable.",
+      "release_date": "2010-07-16",
+      "rating": 8.8
+    },
+    {
+      "id": 2,
+      "movie_name": "The Shawshank Redemption",
+      "thumbnail_url": "https://m.media-amazon.com/images/I/51NiGlapXlL._AC_SY445_.jpg",
+      "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+      "release_date": "1994-09-23",
+      "rating": 9.3
+    },
+    {
+      "id": 3,
+      "movie_name": "The Dark Knight",
+      "thumbnail_url": "https://m.media-amazon.com/images/I/51k0qa6UiyL._AC_SY450_.jpg",
+      "description": "When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham. The Dark Knight must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+      "release_date": "2008-07-18",
+      "rating": 9.0
+    },
+    {
+      "id": 4,
+      "movie_name": "Pulp Fiction",
+      "thumbnail_url": "https://m.media-amazon.com/images/I/71c05lTE03L._AC_SY679_.jpg",
+      "description": "The lives of two mob hitmen, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+      "release_date": "1994-10-14",
+      "rating": 8.9
+    },
+    {
+      "id": 5,
+      "movie_name": "Forrest Gump",
+      "thumbnail_url": "https://m.media-amazon.com/images/I/61K8Hy1jqmL._AC_SY679_.jpg",
+      "description": "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate, and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.",
+      "release_date": "1994-07-06",
+      "rating": 8.8
+    },
+    {
+      "id": 6,
+      "movie_name": "The Matrix",
+      "thumbnail_url": "https://m.media-amazon.com/images/I/51EG732BV3L._AC_SY445_.jpg",
+      "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+      "release_date": "1999-03-31",
+      "rating": 8.7
+    },
+    {
+      "id": 7,
+      "movie_name": "The Godfather",
+      "thumbnail_url": "https://m.media-amazon.com/images/I/51f1FwbM3IL._AC_SY450_.jpg",
+      "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+      "release_date": "1972-03-24",
+      "rating": 9.2
+    },
+    {
+      "id": 8,
+      "movie_name": "The Godfather: Part II",
+      "thumbnail_url": "https://m.media-amazon.com/images/I/71lKhzGEciL._AC_SY679_.jpg",
+      "description": "The early life and career of Vito Corleone in 1920s New York is portrayed while his son, Michael, expands and tightens his grip on the family crime syndicate.",
+      "release_date": "1974-12-20",
+      "rating": 9.0
+    },
+    {
+      "id": 9,
+      "movie_name": "Schindler's List",
+      "thumbnail_url": "https://m.media-amazon.com/images/I/51lNxPcfN2L._AC_SY445_.jpg",
+      "description": "In German-occupied Poland during World War II, Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+      "release_date": "1993-12-15",
+      "rating": 9.0
+    },
+    {
+      "id": 10,
+      "movie_name": "The Lord of the Rings: The Return of the King",
+      "thumbnail_url": "https://m.media-amazon.com/images/I/51Qvs9i5a%2BL._AC_SY450_.jpg",
+      "description": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
+      "release_date": "2003-12-17",
+      "rating": 8.9
+    }
+  ]
