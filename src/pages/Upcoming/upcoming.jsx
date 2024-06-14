@@ -1,8 +1,11 @@
 import React from "react";
 import Card from "../../components/Card/card";
 import { useState, useEffect } from "react";
-import { getPopularMovies } from "../../services/TMDB";
-const Home = () => {
+import { getUpcomingMovies } from "../../services/TMDB";
+import NavBar from "../../components/NavBar/navBar";
+import Footer from "../../components/Footer/footer";
+
+const Upcoming = () => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -12,7 +15,7 @@ const Home = () => {
         // setMovies(response.data);
         // console.log(response.data);
         // setIsLoading(false);
-        getPopularMovies().then((response) => {
+        getUpcomingMovies().then((response) => {
           console.log(response);
           setMovies(response);
           setIsLoading(false);
@@ -28,12 +31,12 @@ const Home = () => {
   return (
     <div className="dark">
       {isLoading && <div>Loading...</div>}
-      {/* <NavBar /> */}
+      <NavBar />
       {!isLoading && (
         <div className="mt-2">
           <div>
             <h1 className="text-4xl text-center font-bold mt-10">
-              Popular Movies
+              Upcoming Movies
             </h1>
           </div>
           <div className="container mx-auto mt-20">
@@ -62,9 +65,10 @@ const Home = () => {
           </div>
         </div>
       )}
-
-      {/* <Card /> */}
+      <div className="fixed inset-x-0 bottom-0">
+        <Footer />
+      </div>
     </div>
   );
 };
-export default Home;
+export default Upcoming;

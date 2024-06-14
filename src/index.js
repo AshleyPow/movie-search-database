@@ -5,6 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import MovieDetails from './pages/MovieDetails/movieDetails';
+import TopRated from './pages/TopRated/topRated';
+import NowPlaying from './pages/NowPlaying/nowPlaying';
+import Upcoming from './pages/Upcoming/upcoming';
+import SearchResults from './pages/SearchResults/searchResults';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,7 +16,11 @@ root.render(
     <BrowserRouter>
     <Routes>
         <Route path="/" element={<App />} />
-        <Route path="moviedetails" element={<MovieDetails />} />
+        <Route path="moviedetails/:movieId" element={<MovieDetails />} />
+        <Route path="toprated" element={<TopRated />} />
+        <Route path="nowplaying" element={<NowPlaying />} />
+        <Route path="upcoming" element={<Upcoming />} />
+        <Route path="searchmovies/:moviename" element={<SearchResults />} />
           {/* <Route path="*" element={<NoPage />} /> */}
       </Routes>
     </BrowserRouter>
