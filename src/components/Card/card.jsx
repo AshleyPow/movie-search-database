@@ -48,3 +48,6 @@ const Card = ({ id, title, description, thumbnail, releaseDate, rating }) => {
 };
 
 export default Card;
+
+
+

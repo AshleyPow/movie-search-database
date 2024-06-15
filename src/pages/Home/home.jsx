@@ -1,17 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Card from "../../components/Card/card";
-import { useState, useEffect } from "react";
 import { getPopularMovies } from "../../services/TMDB";
+import Typewriter from 'typewriter-effect';
+import './home.css'
+import { motion } from "framer-motion";
 const Home = () => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     const getMovies2 = async () => {
       try {
-        // const response = await getMovies();
-        // setMovies(response.data);
-        // console.log(response.data);
-        // setIsLoading(false);
         getPopularMovies().then((response) => {
           console.log(response);
           setMovies(response);
@@ -23,20 +22,40 @@ const Home = () => {
     };
 
     getMovies2();
-  }, [movies.length === 1]);
+  }, []);
 
   return (
     <div className="dark">
       {isLoading && <div>Loading...</div>}
-      {/* <NavBar /> */}
       {!isLoading && (
         <div className="mt-2">
-          <div>
-            <h1 className="text-4xl text-center font-bold mt-10">
-              Popular Movies
+          <motion.div 
+          initial={{y:-200}}
+          animate={{ y: 0, opacity: 1, }}
+          whileHover={{scale:1.2}}
+          
+           className="header-container">
+            <h1 className="overlay-text">
+              Home
+              <br></br>
+              {/* Audience&nbsp; */}
+              {/* <Typewriter
+                options={{
+                  strings: ''
+                  // ['AUDIENCE', 'BUZZER', 'BINGERS']
+                  ,
+                  autoStart: true,
+                  loop: true,
+                  delay: 100,
+                }}
+              /> */}
             </h1>
-          </div>
-          <div className="container mx-auto mt-20">
+          </motion.div>
+          
+          <motion.div
+          initial={{y:-200}}
+          animate={{ x: 0, opacity: 1 }}
+          whileInView={{y:0}} className="container mx-auto mt-20">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {movies.map((Val) => {
                 const {
@@ -49,6 +68,7 @@ const Home = () => {
                 } = Val;
                 return (
                   <Card
+                    key={id}
                     id={id}
                     title={title}
                     description={overview}
@@ -59,12 +79,11 @@ const Home = () => {
                 );
               })}
             </div>
-          </div>
+          </motion.div>
         </div>
       )}
-
-      {/* <Card /> */}
     </div>
   );
 };
+
 export default Home;

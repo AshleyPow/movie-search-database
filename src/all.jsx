@@ -4,7 +4,7 @@ import NavBar from './components/NavBar/navBar';
 import Footer from './components/Footer/footer';
 import Cover from './pages/cover/cover';
 
-function App() {
+function All() {
   return (
     <div className="App">
       <div className="app-wrapper">
@@ -18,4 +18,4 @@ function App() {
   );
 }
 
-export default App;
+export default All;

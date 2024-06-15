@@ -1,0 +1,31 @@
+/* Cover.css */
+.cover-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, #2d3436, #636e72);
+  color: white;
+  text-align: center;
+}
+
+.cover-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.cover-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #0984e3;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.cover-button:hover {
+  background-color: #74b9ff;
+}

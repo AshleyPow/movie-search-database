@@ -1,17 +1,36 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import popcorn from "../../assets/images/popcorn.png";
-import { useState, useEffect } from "react";
-
+import { motion } from "framer-motion";
 const NavBar = () => {
   const [inputValue, setInputValue] = useState("");
+  const [isActive, setIsActive] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
 
+  const handleClick = () => {
+    setIsActive(!isActive);
+  };
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    document.documentElement.classList.toggle('dark', !isDarkMode);
+  };
+
   return (
-    <nav className="bg-gray-800">
+    <motion.div initial={{y:-200}}
+    animate={{y:0}}
+    transition={{duration:0.5}}
+    >
+    <nav
+      className={`${
+        isDarkMode ? "bg-gray-900" : "bg-gray-800"
+      } ${isActive ? "bg-blue-700" : ""}`}
+      onClick={handleClick}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
@@ -23,7 +42,7 @@ const NavBar = () => {
             <form className="max-w-md mx-auto flex items-center">
               <label
                 htmlFor="default-search"
-                className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white hover:bg-purple-600"
               >
                 Search
               </label>
@@ -54,7 +73,7 @@ const NavBar = () => {
                   style={{ width: "500px", height: "44px" }}
                   onChange={handleInputChange}
                 />
-                <Link
+                <NavLink
                   to={`/searchmovies/${inputValue}`}
                   className="text-blue-500"
                 >
@@ -65,38 +84,47 @@ const NavBar = () => {
                   >
                     Search
                   </button>
-                </Link>
+                </NavLink>
               </div>
             </form>
           </div>
-          <div className="flex">
+          <div className="flex items-center">
             <div className="hidden sm:block sm:ml-6">
-              <Link to="/" className="text-blue-500">
+              <NavLink to="/" className="text-blue-500">
                 <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
                   Home
                 </a>
-              </Link>
-              <Link to="/toprated" className="text-blue-500">
+              </NavLink>
+              <NavLink to="/toprated" className="text-blue-500">
                 <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
                   Top Rated
                 </a>
-              </Link>
-              <Link to="/nowplaying" className="text-blue-500">
+              </NavLink>
+              <NavLink to="/nowplaying" className="text-blue-500">
                 <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
                   Now Playing
                 </a>
-              </Link>
-              <Link to="/upcoming" className="text-blue-500">
+              </NavLink>
+              <NavLink to="/upcoming" className="text-blue-500">
                 <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
                   Upcoming
                 </a>
-              </Link>
+              </NavLink>
             </div>
+            <button
+              onClick={toggleDarkMode}
+              className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-white bg-gray-700 hover:bg-gray-600 focus:outline-none focus:bg-gray-600"
+            >
+              {isDarkMode ? "Light Mode" : "Dark Mode"}
+            </button>
           </div>
         </div>
       </div>
     </nav>
+    </motion.div>
   );
 };
 
 export default NavBar;
+
+
